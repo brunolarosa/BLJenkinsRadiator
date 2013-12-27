@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(./fonts/openSans/OpenSans-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(./fonts/openSans/OpenSans-Semibold.ttf);
+    font-weight: bold;
+}
+
+body
+{
+    font: 15px "Open Sans";
+    background: #e7e7e7;
+}
+
+h2
+{
+    font-family: "Open Sans";
+    font-weight: bold;
+}
+
+#container
+{
+    margin: 30px;
+}
+
+.build
+{
+    background: rgba(255, 80, 80, 0.43);
+    margin: 0 auto 15px;
+    position: relative;
+    border: 1px solid #e6e6e6;
+}
+
+.status_sunny {
+    height: 64px;
+    width: 64px;
+    background: url(./images/brightness-high.png) no-repeat center;
+}
+
+.build_name
+{
+    padding: 10px;
+    font: bold 20px Helvetica Neue, sans-serif;
+}
+
+.build_result
+{
+    font: 25px "Open Sans";
+    color: #444 !important;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+}
+
+.build_result_failed
+{
+    color: #cb4040 !important;
+}
+
+.easy-pie
+{
+    margin: 10px;
+}

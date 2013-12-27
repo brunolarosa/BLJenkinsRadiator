@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/easyChart/jquery.easy-pie-chart.css">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="main StyleSheet" charset="utf-8" />
+</head>
+<body>
+<div id="container">
+
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div id="CKLS_DEV" class="panel-3d animated">
+                <div class="front">
+                    <div class="build text-center innerAll border-bottom">
+                        <div><h2>CKLS 13.1 Dev</h2></div>
+                        <div class="easy-pie inline-block easy-pie-gender easyPieChart" data-size="200" data-scale-color="false" data-percent="90" data-bar-color="#cb4040" data-track-color="false" data-line-width="10" style="width: 200px; height: 200px; line-height: 200px;">
+                            <div class="text-center build_result">
+                                <span class="build_result_failed">10</span>/1222
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="./radiatorJenkins.js"></script>
+<script src="./libs/easyChart/jquery.easypiechart.min.js"></script>
+<script>
+
+    $(function() {
+        $('.easy-pie').easyPieChart({
+            easing: 'easeOutBounce',
+            onStep: function(from, to, percent) {
+                $(this.el).find('.percent').text(Math.round(percent));
+            }
+        });
+        var chart = window.chart = $('.easy').data('easyPieChart');
+        $('.js_update').on('click', function() {
+            chart.update(Math.random()*200-100);
+        });
+    });
+
+</script>
+
+</body>
+</html>
